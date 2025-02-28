@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.Dto.AboutDtos;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Newtonsoft.Json;
 
@@ -7,11 +8,6 @@ namespace CarBook.WebUI.ViewComponents.AboutViewComponents
     public class _AboutUsComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        public IViewComponentResult Invoke()
-        {
-            return View();
-        }
-
 
         public _AboutUsComponentPartial(IHttpClientFactory httpClientFactory)
         {
@@ -25,7 +21,8 @@ namespace CarBook.WebUI.ViewComponents.AboutViewComponents
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultAboutDto>>(jsonData);
+                return View(values);
             }
             return View();
         }
