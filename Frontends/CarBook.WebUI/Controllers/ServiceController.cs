@@ -5,11 +5,13 @@ using Newtonsoft.Json;
 
 namespace CarBook.WebUI.Controllers
 {
-    public class ServicesController : Controller
+    public class ServiceController : Controller
     {
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.v1 = "Hizmetler";
+            ViewBag.v2 = "Hizmetlerimiz";
             return View();
         }
     }

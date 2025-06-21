@@ -57,12 +57,13 @@ namespace CarBook.WebApi.Controllers
             await _updateCarCommandHandle.Handle(command);
             return Ok("Araba Bilgisi Güncellendi");
         }
-        [HttpGet("GetCarWihtBrand")]
-        public async Task<IActionResult> GetCarWihtBrand()
+        [HttpGet("GetCarWithBrand")]
+        public async Task<IActionResult> GetCarWithBrand()
         {
             var value = _getCarWithBrandQueryHandler.Handle();
             return Ok(value);
         }
+
         [HttpGet("GetLast5CarsWithBrand")]
         public async Task<IActionResult> GetLast5CarsWithBrand()
         {
