@@ -7,7 +7,6 @@ namespace CarBook.WebUI.Controllers
 {
     public class ServiceController : Controller
     {
-
         public async Task<IActionResult> Index()
         {
             ViewBag.v1 = "Hizmetler";
