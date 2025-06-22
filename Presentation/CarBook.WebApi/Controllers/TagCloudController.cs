@@ -1,4 +1,5 @@
-﻿using CarBook.Application.Features.Mediator.Commands.LocaitonCommands;
+﻿using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
+using CarBook.Application.Features.Mediator.Commands.LocaitonCommands;
 using CarBook.Application.Features.Mediator.Commands.TagCloudCommands;
 using CarBook.Application.Features.Mediator.Queries.TagCloudQueries;
 using MediatR;
@@ -51,6 +52,13 @@ namespace CarBook.WebApi.Controllers
         {
             await _mediator.Send(command);
             return Ok("Etiket Başarıyla Güncellendi");
+        }
+
+        [HttpGet("GetTagCloudByBlogId/{id}")]
+        public async Task<IActionResult> GetTagCloudByBlogId(int id)
+        {
+            var values = await _mediator.Send(new GetTagCloudByBlogIdQuery(id));
+            return Ok(values);
         }
     }
 }
