@@ -51,5 +51,12 @@ namespace CarBook.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Yorum Başarıyla Güncellendi");
         }
+
+        [HttpGet("CommentListByBlog")]
+        public async Task<IActionResult> CommentListByBlog(int id)
+        {
+            var values = await _mediator.Send(new GetCommentListByBlogQuery(id));
+            return Ok(values);
+        }
     }
 }
