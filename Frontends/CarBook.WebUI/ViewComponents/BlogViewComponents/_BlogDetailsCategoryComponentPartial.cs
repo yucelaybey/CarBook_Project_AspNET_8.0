@@ -1,4 +1,4 @@
-﻿using CarBook.Dto.CategoryDto;
+﻿using CarBook.Dto.CategoryDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

@@ -1,0 +1,42 @@
+﻿@model UpdateBannerDto
+@{
+    ViewData["Title"] = "UpdateBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Yeni Banner Bilgisi Girişi</h4>
+                <p class="card-subtitle mb-4">Banner alanına veri girişini aşağıdaki panelden yapabilirsiniz.</p>
+
+                <form method="post">
+                    <input type="hidden" asp-for="bannerID" />
+                    <div class="form-group">
+                        <label for="exampleInputTitle">Başlık</label>
+                        <input type="text" class="form-control" id="exampleInputTitle" asp-for="title" placeholder="Başlığı Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputDescription">Açıklama</label>
+                        <input type="text" class="form-control" id="exampleInputDescription" asp-for="description" placeholder="Açıklamayı Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputVideoUrl">Video Linki</label>
+                        <input type="text" class="form-control" id="exampleInputVideoUrl" asp-for="videoUrl" placeholder="Videonun Youtube Linkini Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputVideoDescription">Video Açıklama</label>
+                        <input type="text" class="form-control" id="exampleInputVideoDescription" asp-for="videoDescription" placeholder="Video Açıklama Bilgisini Giriniz">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Markayı Kaydet</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
