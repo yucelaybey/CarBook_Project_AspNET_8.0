@@ -1,5 +1,4 @@
-﻿using CarBook.Dto.BannerDtos;
-using CarBook.Dto.BannerDtos;
+﻿using CarBook.Dto.LocationDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -7,12 +6,12 @@ using System.Text;
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/AdminBanner")]
-    public class AdminBannerController : Controller
+    [Route("Admin/AdminLocation")]
+    public class AdminLocationController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public AdminBannerController(IHttpClientFactory httpClientFactory)
+        public AdminLocationController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -20,42 +19,42 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7279/api/Banners");
+            var responseMessage = await client.GetAsync("https://localhost:7279/api/Locations");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultBannerDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
                 return View(values);
             }
             return View();
         }
 
         [HttpGet]
-        [Route("CreateBanner")]
-        public IActionResult CreateBanner()
+        [Route("CreateLocation")]
+        public IActionResult CreateLocation()
         {
             return View();
         }
 
         [HttpPost]
-        [Route("CreateBanner")]
-        public async Task<IActionResult> CreateBanner(CreateBannerDto createBannerDto)
+        [Route("CreateLocation")]
+        public async Task<IActionResult> CreateLocation(CreateLocationDto createLocationDto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(createBannerDto);
+            var jsonData = JsonConvert.SerializeObject(createLocationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7279/api/Banners", stringContent);
+            var responseMessage = await client.PostAsync("https://localhost:7279/api/Locations", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "AdminBanner", new { area = "Admin" }) ;
+                return RedirectToAction("Index", "AdminLocation", new { area = "Admin" });
             }
             return View();
         }
-        [Route("RemoveBanner/{id}")]
-        public async Task<IActionResult> RemoveBanner(int id)
+        [Route("RemoveLocation/{id}")]
+        public async Task<IActionResult> RemoveLocation(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7279/api/Banners?id={id}");
+            var responseMessage = await client.DeleteAsync($"https://localhost:7279/api/Locations?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -64,28 +63,28 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("UpdateBanner/{id}")]
-        public async Task<IActionResult> UpdateBanner(int id)
+        [Route("UpdateLocation/{id}")]
+        public async Task<IActionResult> UpdateLocation(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7279/api/Banners/{id}");
+            var responseMessage = await client.GetAsync($"https://localhost:7279/api/Locations/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateBannerDto>(jsonData);
+                var values = JsonConvert.DeserializeObject<UpdateLocationDto>(jsonData);
                 return View(values);
             }
             return View();
         }
 
         [HttpPost]
-        [Route("UpdateBanner/{id}")]
-        public async Task<IActionResult> UpdateBanner(UpdateBannerDto updateBannerDto)
+        [Route("UpdateLocation/{id}")]
+        public async Task<IActionResult> UpdateLocation(UpdateLocationDto updateLocationDto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateBannerDto);
+            var jsonData = JsonConvert.SerializeObject(updateLocationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync($"https://localhost:7279/api/Banners/", stringContent);
+            var responseMessage = await client.PutAsync($"https://localhost:7279/api/Locations/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

@@ -1,5 +1,4 @@
-﻿using CarBook.Dto.BannerDtos;
-using CarBook.Dto.BannerDtos;
+﻿using CarBook.Dto.SocialMediaDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
@@ -7,12 +6,12 @@ using System.Text;
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/AdminBanner")]
-    public class AdminBannerController : Controller
+    [Route("Admin/AdminSocialMedia")]
+    public class AdminSocialMediaController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public AdminBannerController(IHttpClientFactory httpClientFactory)
+        public AdminSocialMediaController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -20,42 +19,42 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7279/api/Banners");
+            var responseMessage = await client.GetAsync("https://localhost:7279/api/SocialMedias");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultBannerDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultSocialMediaDto>>(jsonData);
                 return View(values);
             }
             return View();
         }
 
         [HttpGet]
-        [Route("CreateBanner")]
-        public IActionResult CreateBanner()
+        [Route("CreateSocialMedia")]
+        public IActionResult CreateSocialMedia()
         {
             return View();
         }
 
         [HttpPost]
-        [Route("CreateBanner")]
-        public async Task<IActionResult> CreateBanner(CreateBannerDto createBannerDto)
+        [Route("CreateSocialMedia")]
+        public async Task<IActionResult> CreateSocialMedia(CreateSocialMediaDto createSocialMediaDto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(createBannerDto);
+            var jsonData = JsonConvert.SerializeObject(createSocialMediaDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7279/api/Banners", stringContent);
+            var responseMessage = await client.PostAsync("https://localhost:7279/api/SocialMedias", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "AdminBanner", new { area = "Admin" }) ;
+                return RedirectToAction("Index", "AdminSocialMedia", new { area = "Admin" });
             }
             return View();
         }
-        [Route("RemoveBanner/{id}")]
-        public async Task<IActionResult> RemoveBanner(int id)
+        [Route("RemoveSocialMedia/{id}")]
+        public async Task<IActionResult> RemoveSocialMedia(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7279/api/Banners?id={id}");
+            var responseMessage = await client.DeleteAsync($"https://localhost:7279/api/SocialMedias?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -64,28 +63,28 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("UpdateBanner/{id}")]
-        public async Task<IActionResult> UpdateBanner(int id)
+        [Route("UpdateSocialMedia/{id}")]
+        public async Task<IActionResult> UpdateSocialMedia(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7279/api/Banners/{id}");
+            var responseMessage = await client.GetAsync($"https://localhost:7279/api/SocialMedias/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<UpdateBannerDto>(jsonData);
+                var values = JsonConvert.DeserializeObject<UpdateSocialMediaDto>(jsonData);
                 return View(values);
             }
             return View();
         }
 
         [HttpPost]
-        [Route("UpdateBanner/{id}")]
-        public async Task<IActionResult> UpdateBanner(UpdateBannerDto updateBannerDto)
+        [Route("UpdateSocialMedia/{id}")]
+        public async Task<IActionResult> UpdateSocialMedia(UpdateSocialMediaDto updateSocialMediaDto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(updateBannerDto);
+            var jsonData = JsonConvert.SerializeObject(updateSocialMediaDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync($"https://localhost:7279/api/Banners/", stringContent);
+            var responseMessage = await client.PutAsync($"https://localhost:7279/api/SocialMedias/", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

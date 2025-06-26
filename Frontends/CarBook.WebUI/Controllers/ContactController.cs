@@ -17,6 +17,8 @@ namespace CarBook.WebUI.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.v1 = "İletişim";
+            ViewBag.v2 = "Bize Yazın";
             return View();
         }
 
@@ -26,11 +28,11 @@ namespace CarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             createContactDto.SendDate = DateTime.Now;
             var jsondata = JsonConvert.SerializeObject(createContactDto);
-            StringContent stringContent = new StringContent(jsondata, Encoding.UTF8, "applicationBuilder/json");
+            StringContent stringContent = new StringContent(jsondata, Encoding.UTF8, "application/json");
             var responseMessage = await client.PostAsync("https://localhost:7279/api/Contacts", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "Default");
+                return RedirectToAction("Index");
             }
             return View();
         }

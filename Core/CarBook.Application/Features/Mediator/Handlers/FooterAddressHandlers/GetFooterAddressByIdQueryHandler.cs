@@ -24,7 +24,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.FooterAddressHandlers
         {
             var value = await _repository.GetByIdAsync(request.Id);
             return new GetFooterAddressByIdQueryResult
-            {
+            { 
+                FooterAddressID = value.FooterAddressID,
                 Address=value.Address,
                 Description=value.Description,
                 Email=value.Email,

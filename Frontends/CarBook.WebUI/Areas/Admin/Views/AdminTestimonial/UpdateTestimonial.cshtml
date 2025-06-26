@@ -1,0 +1,42 @@
+﻿@model UpdateTestimonialDto
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Referans Bilgilerini Güncelleme Sayfası</h4>
+                <p class="card-subtitle mb-4">Referans güncelleme işleminin yapıldığı sayfamızdır. Bilgileri eksiksiz doldurup kaydet butonuna tıklamanız yeterlidir.</p>
+
+                <form method="post">
+                    <input type="hidden" asp-for="testimonialID" />
+                    <div class="form-group">
+                        <label for="exampleInputTestimonialName">Referans Adı Soyadı </label>
+                        <input type="text" class="form-control" id="exampleInputTestimonialName" asp-for="name" placeholder="Referans Adı ve Soyadını Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputTestimonialTitle">Referans Ünvanı</label>
+                        <input type="text" class="form-control" id="exampleInputTestimonialTitle" asp-for="title" placeholder="Referans Ünvanı Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputTestimonialComment">Referans Yorumu</label>
+                        <input type="text" class="form-control" id="exampleInputTestimonialComment" asp-for="comment" placeholder="Referans Yorumunu Giriniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputTestimonialImageUrl">Referans Resim Linki</label>
+                        <input type="text" class="form-control" id="exampleInputTestimonialImageUrl" asp-for="imageUrl" placeholder="Referans Resim Linkini Giriniz">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">Referans Veri Girişini Güncelle</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
