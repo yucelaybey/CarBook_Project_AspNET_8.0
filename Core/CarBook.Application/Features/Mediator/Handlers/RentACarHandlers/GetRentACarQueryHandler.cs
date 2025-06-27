@@ -21,10 +21,13 @@ namespace CarBook.Application.Features.Mediator.Handlers.RentACarHandlers
 
         public async Task<List<GetRentACarQueryResult>> Handle(GetRentACarQuery request, CancellationToken cancellationToken)
         {
-            var values = _rentACarRepository.GetByFilterAsync(x => x.LocationID == request.LocationID && x.Available == true);
+            var values = await _rentACarRepository.GetByFilterAsync(x => x.LocationID == request.LocationID && x.Available == true);
             return values.Select(y => new GetRentACarQueryResult
             {
-                CarId = y.CarID
+                CarId = y.CarID,
+                Brand = y.Car.Brand.Name,
+                Model =y.Car.Model,
+                CoverImageUrl = y.Car.CoverImageUrl,
             }).ToList();
         }
     }
