@@ -1,11 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.Dto.FooterAddressDtos;
+using CarBook.Dto.TestimonialDtos;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace CarBook.WebUI.ViewComponents.UILayoutViewComponents
 {
     public class _FooterUILayoutViewComponentPartial:ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public _FooterUILayoutViewComponentPartial(IHttpClientFactory httpClientFactory)
         {
+            _httpClientFactory = httpClientFactory;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMesssage = await client.GetAsync("https://localhost:7279/api/FooterAdresses");
+            if (responseMesssage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMesssage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultFooterAddressDto>>(jsonData);
+                return View(values);
+            }
             return View();
         }
     }
