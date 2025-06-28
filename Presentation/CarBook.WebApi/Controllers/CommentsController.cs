@@ -1,5 +1,6 @@
 ﻿using CarBook.Application.Features.Mediator.Commands.CommentCommands;
 using CarBook.Application.Features.Mediator.Queries.CommentQueries;
+using CarBook.Application.Features.Mediator.Results.CommentResults;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -56,6 +57,13 @@ namespace CarBook.WebApi.Controllers
         public async Task<IActionResult> CommentListByBlog(int id)
         {
             var values = await _mediator.Send(new GetCommentListByBlogQuery(id));
+            return Ok(values);
+        }
+
+        [HttpGet("GetCountCommentsByBlog")]
+        public async Task<IActionResult> GetCountCommentsByBlog(int id)
+        {
+            var values = await _mediator.Send(new GetCountCommentsByBlogQuery(id));
             return Ok(values);
         }
     }

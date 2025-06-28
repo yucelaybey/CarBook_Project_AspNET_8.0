@@ -1,4 +1,5 @@
 ﻿using CarBook.Dto.BlogDtos;
+using CarBook.Dto.CommentDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -21,8 +22,19 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
             {
                 var jsonData = await responseMesssage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<GetBlogByIdDto>(jsonData);
+
+                var responseMesssage2 = await client.GetAsync($"https://localhost:7279/api/Comments/GetCountCommentsByBlog?id={id}");
+                if (responseMesssage2.IsSuccessStatusCode)
+                {
+                    var jsonData2 = await responseMesssage2.Content.ReadAsStringAsync();
+                    var values2 = JsonConvert.DeserializeObject<GetCountCommentsByBlogDto>(jsonData2);
+                    ViewBag.CommentCount = values2.CountCommentsByBlog;
+                }
+
                 return View(values);
             }
+
+            
             return View();
         }
     }

@@ -28,6 +28,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.CommentHandlers
                 BlogID = x.BlogID,
                 CommentID =x.CommentID,
                 CreatedDate =x.CreatedDate,
+                Email= x.Email,
                 Description =x.Description,
                 Name =x.Name
             }).ToList();
