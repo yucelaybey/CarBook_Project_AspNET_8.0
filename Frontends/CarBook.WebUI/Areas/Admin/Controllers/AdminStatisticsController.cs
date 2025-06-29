@@ -45,7 +45,7 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
             if (responseMessage3.IsSuccessStatusCode)
             {
                 int v3 = random.Next(0, 101);
-                var jsonData3 = await responseMessage2.Content.ReadAsStringAsync();
+                var jsonData3 = await responseMessage3.Content.ReadAsStringAsync();
                 var values3 = JsonConvert.DeserializeObject<ResultStatisticsDto>(jsonData3);
                 ViewBag.AuthorCount = values3.AuthorCount;
                 ViewBag.Percent3 = v3;
