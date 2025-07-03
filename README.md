@@ -1,4 +1,4 @@
-![Arabalar-2](https://github.com/user-attachments/assets/c29ec7b5-2fed-4c5e-8f87-cb361984023a)# CarBook ASP-NET 8.0.
+# CarBook ASP-NET 8.0.
 
 # KULLANICI TARAFI :
 
