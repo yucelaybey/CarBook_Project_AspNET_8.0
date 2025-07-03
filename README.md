@@ -1,98 +1,77 @@
-# E-Ticaret Sitesi ASP-NET 8.0.
+![Arabalar-2](https://github.com/user-attachments/assets/c29ec7b5-2fed-4c5e-8f87-cb361984023a)# CarBook ASP-NET 8.0.
 
 # KULLANICI TARAFI :
 
 
 ## ANASAYFA BÖLÜMÜ :
 
-### Giriş - Kayıt - Şifre Yenileme:
-![GirişYap](https://github.com/user-attachments/assets/3c3bca4e-ec50-4fa2-84aa-90f3ad344573)
-![Kayıt Ol](https://github.com/user-attachments/assets/5fa19373-0013-41c0-8c2d-d663efef2090)
-![Kayıt Ol2](https://github.com/user-attachments/assets/0c15f687-bb28-4aed-8c6a-c5b467711d15)
-![PasswordReset](https://github.com/user-attachments/assets/baec36a4-62c4-4a11-bd18-d2b99bc96419)
-![MailEkranı](https://github.com/user-attachments/assets/076e9620-90f8-47d9-a3a8-1461cea3e5ba)
-![PasswordEmailCodepng](https://github.com/user-attachments/assets/58436944-08bb-4651-8b44-d723ee3d1484)
-![NewPassword](https://github.com/user-attachments/assets/fd663fda-8e6a-4a20-876c-85db1e438359)
-![NewPassword2](https://github.com/user-attachments/assets/3117a796-4e7e-43e9-abb9-e8f073f5d810)
+### Giriş - Kayıt:
+![Login1](https://github.com/user-attachments/assets/429d1051-c353-46cf-a046-7977b8dafbd1)
+![Login2](https://github.com/user-attachments/assets/b807db26-bc8d-475c-9252-8eb2bae57f35)
 
 ### Anasayfa:
-![Anasayfa1](https://github.com/user-attachments/assets/d0d158e4-2179-400b-bb24-e4d2a61cd522)
-![Anasayfa2](https://github.com/user-attachments/assets/798876b1-b857-4a4e-af8d-f12f59eb7267)
-![AnasayfaSidebar](https://github.com/user-attachments/assets/fdd09a2f-5cff-42b9-8eac-1b96e9c0ac7f)
-![giriş yapmadan kişisel sayfalara erişme hatası](https://github.com/user-attachments/assets/de496709-89e5-471d-bf4a-10f4c63bed6b)
+![Ana Ekran-1](https://github.com/user-attachments/assets/e2948fab-93f4-4ccb-8bd5-a0054b013146)
+![Ana Ekran-2](https://github.com/user-attachments/assets/fb4b7014-61a1-48b2-9d57-cba3073e20f2)
+![Ana Ekran-3](https://github.com/user-attachments/assets/4c67ada0-040a-4987-b0d5-e9e9f9f28018)
+![Ana Ekran-4](https://github.com/user-attachments/assets/4e8af5a9-e4af-4865-9668-d8d5e80cbca3)
+![Ana Ekran-5](https://github.com/user-attachments/assets/dd898cc7-7de2-430a-95f3-07357ac1c767)
+![Ana Ekran-6](https://github.com/user-attachments/assets/b73ddba2-fb63-451e-a8e0-2b93bf5052c0)
+![Ana Ekran-7](https://github.com/user-attachments/assets/4e4d363e-d444-40bc-8d73-24d028a3334a)
+![Ana Ekran-8](https://github.com/user-attachments/assets/375458c9-b56b-4ceb-9df9-0f066c6dfd32)
+![Ana Ekran-9](https://github.com/user-attachments/assets/f9e5a121-eb04-42c6-a859-adb09ac5150e)
 
-### Kategoriler:
-![tümkategoriler1](https://github.com/user-attachments/assets/7d643537-2660-46d4-add3-29cdafb88c0f)
-![tümkategoriler2](https://github.com/user-attachments/assets/764e2526-cdec-438c-ac6f-a42a0dccae5c)
+### Fiyatlarımız:
+![Fiyatlandırma-1](https://github.com/user-attachments/assets/ac08ecdb-88b9-4dfe-8e91-bc3b38ee0e74)
+![Fiyatlandırma-2](https://github.com/user-attachments/assets/be31bd05-c8cc-4d10-9fe0-b7aab3567c80)
+![Fiyatlandırma-3](https://github.com/user-attachments/assets/f19df3c5-8c38-49c2-a598-0c7af718996b)
 
-### Kategori Ürünleri:
-![Kategori1](https://github.com/user-attachments/assets/5d6d4aa0-1f71-4b73-b37a-a33c74b41ab9)
-![Kategori2](https://github.com/user-attachments/assets/087db97c-351b-4fd5-972e-cdc73dcbaa78)
-![Kategori3](https://github.com/user-attachments/assets/cce21dda-50ce-4853-a98d-252dec813836)
+### Arabalar:
+![Arabalar-1](https://github.com/user-attachments/assets/bbe0be34-069f-4e3b-815b-cf25e3577313)
+![Arabalar-2](https://github.com/user-attachments/assets/007462b1-f37e-4a53-a906-d0549fc709d7)
 
-### Ürün Arama:
-![Search](https://github.com/user-attachments/assets/060b53fb-dedb-4cc6-8c7e-0f676152635a)
+### Bloglar:
+![Blog1](https://github.com/user-attachments/assets/85b59af3-c3a4-4851-8519-a513dd4030ce)
 
-### Favoriler:
-![Favoriler](https://github.com/user-attachments/assets/a0a00277-f159-42e0-978c-dc520c0af34a)
-![Favoriler2](https://github.com/user-attachments/assets/1246510d-0aed-4ab8-995f-1ea4de78e365)
-![Favoriler3](https://github.com/user-attachments/assets/fd606170-2ae8-4000-9234-1641e2b69790)
+### Blog Detay:
+![BlogDetail1](https://github.com/user-attachments/assets/d3d2ea9b-a1d6-41a0-97b9-106730d31e2c)
+![BlogDetail2](https://github.com/user-attachments/assets/a17eb69d-d607-4d46-b496-c6828f7c98e8)
+![BlogDetail3](https://github.com/user-attachments/assets/e7d56f4d-d3f1-4c58-8bb7-8593b2b12d37)
+![BlogDetail4](https://github.com/user-attachments/assets/9db8aa3a-66a4-4c6c-a804-f406ff89eab9)
 
-### Trendler:
-![trendler1](https://github.com/user-attachments/assets/7ce2d106-6ce0-4e9e-8c85-1b819ce72566)
-![trendler2](https://github.com/user-attachments/assets/d3b61d26-0785-48aa-9aa0-e752b8eaedb1)
-
-### Hesabım - Siparişlerim:
-![Hesabım1](https://github.com/user-attachments/assets/719e227b-82c3-44e3-a028-a1277793ce3b)
-![Hesabım2](https://github.com/user-attachments/assets/da01c6e2-d811-4241-8070-63853b782750)
-![Siparişlerim](https://github.com/user-attachments/assets/3a57d687-1f43-4604-b553-b66a392b0052)
-
-### Sepet - Ödeme - Sipariş Sonu:
-![sepet1](https://github.com/user-attachments/assets/9dfd0ab9-5e24-478e-be87-02e67720faee)
-![sepet2](https://github.com/user-attachments/assets/7e60fa61-ee3d-49c9-8930-209be0f5a47b)
-![sepet3](https://github.com/user-attachments/assets/37082331-f8df-4ede-8a3c-06b221463f70)
-![sepet4](https://github.com/user-attachments/assets/1889b550-de31-4d9a-a736-be7ae1983bcb)
-![OdemePlanı](https://github.com/user-attachments/assets/004e3789-a565-41a5-a5b0-a297d8f4d5d8)
-![SiparişOkey](https://github.com/user-attachments/assets/2b54ceae-392d-4b31-82f5-73b76599451a)
-![SiparişOkey2](https://github.com/user-attachments/assets/8facf2d5-ba61-412a-ab65-dcf06c9907b3)
-
-### Yardım:
-![Yardim](https://github.com/user-attachments/assets/0ad0b921-a344-46e1-bffc-b44ee61c8057)
-![Yardim2](https://github.com/user-attachments/assets/8d44bec7-181e-4c63-a628-005c6c41557e)
-
-### MOBİL UYUMLU OLDUĞUNA DAİR BAZI ÖRNEKLER:
-![Anasayfa](https://github.com/user-attachments/assets/f5b6a0c9-85c6-40df-9907-1b2ca48b9a10)
-![Favoriler](https://github.com/user-attachments/assets/c7fd5f3b-b671-49e9-a854-5f7934410a4e)
-![Hesabım](https://github.com/user-attachments/assets/594ea9a2-6cb2-4663-bb9b-ce472a8f83ee)
-![Siparişlerim](https://github.com/user-attachments/assets/afd82fff-19ab-4ff3-890b-9773dcee2ef2)
-![Sepet](https://github.com/user-attachments/assets/3015e910-500f-46f8-8d42-5a85aebbebc2)
-![SiparişSon](https://github.com/user-attachments/assets/07a492fd-8070-46a6-a8df-c496fd25e742)
+### Blog Detay:
+![İletişim1](https://github.com/user-attachments/assets/12939bf0-573f-4b96-b00b-1794097b9860)
+![İletişim2](https://github.com/user-attachments/assets/791b23ca-9db4-4189-a902-05bea4e338c9)
 
 ## ADMİN BÖLÜMÜ :
 
 ### Admin Anasayfa:
-![AdminAnasayfa](https://github.com/user-attachments/assets/ca60a142-5309-40e8-86d4-51294f7215c6)
-
-### Admin Kategoriler:
-![AdminKategori](https://github.com/user-attachments/assets/5965e84c-d1df-4fc6-9331-2dbbf37a387e)
-
-### Admin Ürünler:
-![AdminÜrünler](https://github.com/user-attachments/assets/498208f4-dfd4-4286-9471-4e0c8d58791e)
-
-### Admin Siparişler:
-![AdminSiparişler](https://github.com/user-attachments/assets/8db68508-3323-4110-b219-d341f15051e6)
+![Admin-1](https://github.com/user-attachments/assets/7f151a4c-80a4-4315-b040-97d2e5a7a98c)
+![Admin-2](https://github.com/user-attachments/assets/132c60a5-eef3-4274-ab09-920d8a45a7fa)
+![Admin-3](https://github.com/user-attachments/assets/273e2945-ac68-4c77-96a9-45c22aeb3ea0)
+![Admin-4](https://github.com/user-attachments/assets/02effe3e-47b3-409b-9f63-84d69d8f282b)
+![Admin-5](https://github.com/user-attachments/assets/2ec6ca78-a3ac-40ec-aca6-e1af291fd0c5)
+![Admin-6](https://github.com/user-attachments/assets/9391a6ba-e283-4021-842b-5b79a6a37abc)
+![Admin-7](https://github.com/user-attachments/assets/3930d527-131f-45c5-af76-e1ca233f7a15)
+![Admin-8](https://github.com/user-attachments/assets/bd791a53-fc8e-43dd-bb22-a5fbdcfacdb3)
+![Admin-9](https://github.com/user-attachments/assets/eaa03d33-fd86-4322-9484-9da2aa1a4281)
+![Admin-10](https://github.com/user-attachments/assets/d1ac9021-f1df-4ba8-b619-1edd88d868b7)
+![Admin-11](https://github.com/user-attachments/assets/e0efb92a-7be6-4686-8575-069a3b367422)
+![Admin-12](https://github.com/user-attachments/assets/9e59be85-6c2c-4ae1-ba56-849058c72a7c)
+![Admin-13](https://github.com/user-attachments/assets/b1d756ac-93f5-4205-b526-75caf5155648)
+![Admin-14](https://github.com/user-attachments/assets/cfc16731-ec17-47fd-87f1-f00ebb0a8c4c)
+![Admin-15](https://github.com/user-attachments/assets/f01274fd-00fd-4736-a5d6-b83035c6ff27)
+![Admin-16](https://github.com/user-attachments/assets/74cff5cb-6906-4156-9fa0-2abd783d4825)
+![Admin-17](https://github.com/user-attachments/assets/7b91e6ee-939e-4959-b4f4-e2e3d9341ff3)
 
 # API BÖLÜMÜ :
-![localhost_7026_swagger_index html (2)](https://github.com/user-attachments/assets/f6d2125c-7ed2-492d-8482-0f524e890a8d)
+![screencapture-localhost-7279-swagger-index-html-2025-07-03-11_05_18](https://github.com/user-attachments/assets/7a4e4377-0c68-4ec5-84e8-1a0769ce7085)
 
-
+# DATABASE DIAGRAM :
+![Database](https://github.com/user-attachments/assets/8edd4cef-1dbe-4e92-b890-9a1621ffea1b)
 
 ## Eklenenler :
 * Neredeyse herşey dinamik hale getirildi.
-* Admin sayfasında kargo takipten ürün iptale kadar herşey eklenebilir halde.
-* Admin paneline login olmadan admin paneline erişemezsiniz ve bunu denerseniz otomatik olarak login ekranına yönlendiriliyorsunuz.
-* Website içeriğini merak ediyorsanız, neleri ekleyebiliyoruz neleri silebiliriz diyorsanız eğer resimlere ve giflere göz atınız.
-* Bu projenin asıl amacı birçok teknolojiyi öğrenmeyi amaçlamıştır. kullanılan teknolojiler aşağıda mevcuttur.
+* Bu proje içerikten çok design pattern için hazırlanmıştır (Mediator Design Pattern).
 
 ## Website Yaparken Kullandığım Teknolojiler:
 
@@ -103,7 +82,6 @@
 * MSSQL
 * X.PagedList ile Pagination İşlemleri
 * Onion Architecture
-* Repositories Design Pattern
 * Mediator Design Pattern
 * Swagger
 * Postman
@@ -114,5 +92,5 @@
 * DTO Layer
 * Mvc
 * Deploy
-* MailKit ile Mail Gönderme İşlemleri
 * Tüm CRUD İşlemleri
+* SignalR (sadece bir yerde test edilmiştir.)
